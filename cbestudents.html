@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Resources</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f7;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .resource-list {
+      max-width: 800px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .resource {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .resource span {
+      font-size: 18px;
+      color: #555;
+    }
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+    .buttons a {
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      color: white;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+    .download {
+      background-color: #4CAF50;
+    }
+    .download:hover {
+      background-color: #45a049;
+    }
+    .read {
+      background-color: #2196F3;
+    }
+    .read:hover {
+      background-color: #0b7dda;
+    }
+    @media (max-width: 600px) {
+      .resource {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .buttons {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<h1>Student Resources</h1>
+
+<div class="resource-list">
+  
+  <div class="resource">
+    <span>📖 Introduction to Computer Science</span>
+    <div class="buttons">
+      <a href="your-download-link.pdf" class="download" download>Download</a>
+      <a href="https://drive.google.com/your-view-link" class="read" target="_blank">Read</a>
+    </div>
+  </div>
+
+  <div class="resource">
+    <span>📖 Web Development Basics</span>
+    <div class="buttons">
+      <a href="your-download-link-2.pdf" class="download" download>Download</a>
+      <a href="https://drive.google.com/your-view-link-2" class="read" target="_blank">Read</a>
+    </div>
+  </div>
+
+  <div class="resource">
+    <span>📖 Introduction to AI</span>
+    <div class="buttons">
+      <a href="your-download-link-3.pdf" class="download" download>Download</a>
+      <a href="https://drive.google.com/your-view-link-3" class="read" target="_blank">Read</a>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
