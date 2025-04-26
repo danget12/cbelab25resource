@@ -74,33 +74,48 @@
 
 <h1>Student Resources</h1>
 
-<div class="resource-list">
-  
-  <div class="resource">
-    <span>📖 Introduction to Computer Science</span>
-    <div class="buttons">
-      <a href="your-download-link.pdf" class="download" download>Download</a>
-      <a href="https://drive.google.com/your-view-link" class="read" target="_blank">Read</a>
-    </div>
-  </div>
-
-  <div class="resource">
-    <span>📖 Web Development Basics</span>
-    <div class="buttons">
-      <a href="your-download-link-2.pdf" class="download" download>Download</a>
-      <a href="https://drive.google.com/your-view-link-2" class="read" target="_blank">Read</a>
-    </div>
-  </div>
-
-  <div class="resource">
-    <span>📖 Introduction to AI</span>
-    <div class="buttons">
-      <a href="your-download-link-3.pdf" class="download" download>Download</a>
-      <a href="https://drive.google.com/your-view-link-3" class="read" target="_blank">Read</a>
-    </div>
-  </div>
-
+<div class="resource-list" id="resourceList">
+  <!-- Resources will appear here automatically -->
 </div>
+
+<script>
+  // 📚 Your list of resources
+  const resources = [
+    {
+      title: "Introduction to Computer Science",
+      downloadLink: "your-download-link.pdf",
+      readLink: "https://drive.google.com/your-view-link"
+    },
+    {
+      title: "Web Development Basics",
+      downloadLink: "your-download-link-2.pdf",
+      readLink: "https://drive.google.com/your-view-link-2"
+    },
+    {
+      title: "Introduction to AI",
+      downloadLink: "your-download-link-3.pdf",
+      readLink: "https://drive.google.com/your-view-link-3"
+    }
+    // ➕ Add more resources easily here
+  ];
+
+  // 🎯 Target div
+  const resourceList = document.getElementById('resourceList');
+
+  // 🚀 Load resources dynamically
+  resources.forEach(resource => {
+    const resourceDiv = document.createElement('div');
+    resourceDiv.className = 'resource';
+    resourceDiv.innerHTML = `
+      <span>📖 ${resource.title}</span>
+      <div class="buttons">
+        <a href="${resource.downloadLink}" class="download" download>Download</a>
+        <a href="${resource.readLink}" class="read" target="_blank">Read</a>
+      </div>
+    `;
+    resourceList.appendChild(resourceDiv);
+  });
+</script>
 
 </body>
 </html>
